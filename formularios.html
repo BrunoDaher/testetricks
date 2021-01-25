@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formularios</title>
+    </head>
+    <body>
+      <header>
+        <nav>
+        <ul>
+          <li><a href="inicio.html">INÍCIO</a></li>
+          <li><a href="git.html">GIT</a></li>
+          <li><a href="api.html">APIs Restfull</a></li>
+          <li><a href="conceitos.html">CONCEITOS</a></li>
+          <li><a href="formularios.html">FORMULARIOS</a></li>
+          <li><a href="navegacao.html">NAVEGACAO</a></li>
+        </ul>
+      </nav>
+      </header>          
+            <h4>Formulários</h4>  
+              <p>Formulários são utilizados pra ler dados da página e enviar, ou 
+                <br>mesmo executar cálculos.                
+                <p>                             
+                  <fieldset>                  
+                    <legend><b>Elementos de formulário e seletores</b></legend>                                                         
+                            Form - Formulário para entrada de dados
+                        <br>TextField - Campo para texto
+                        <br>TextArea - Campo para texto grande
+                        <br>Button -  Botão de ação
+                        <br>Label -  Rótulo para inputs
+                        <br>Input -  Campo para entrada de dados                    
+                      
+                      <fieldset style="margin:5px">
+                        <legend>Inputs</legend>                    
+                          <legend>São varios os tipos de Input, entre eles:</legend>                    
+                            <ul> 
+                              <li>type="number" -  formato adequado para números </dd>                    
+                              <br>Idade <input type="number" size=1 value='1'>
+                              <li>type="search" - ideal para pesquisas - pode conter dados de uma lista </dd>                    
+                                <br>Pesquisa <input type="search" placeholder="pesquisar">
+                              <li>type="password" - ideal para pesquisas - pode conter dados de uma lista </dd>                    
+                                <br>Idade <input type="number" value="1000">
+                              <li>type="url" - aceita somente caminhos url</dd>                    
+                                <br>Url <input type="url" max-lenght="1" value="http://www.ux.com">
+                              <li>type="range" - uma barra deslizante</dd>                                          
+                                <br>Volume <input type="range" max-lenght="1">
+                            </ul>
+                          <legend>
+                            Uma observarção interessante: o label é mais que um mero rótulo para um input, sob ação do mouse 
+                            ele direciona o cursor para o campo à qual faz referência.                                                        
+                          <br>
+                          Uma lista completa de ações pode ser encontrada
+                          em <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a>.
+                        </legend>
+                      </fieldset>
+                      <fieldset>
+                        <legend><b>Seletores</b></legend>
+                        Seletores são chaves que identificam um elemento HTML,
+                        como por exemplo o "id" ou a "class" (classe).
+                        Através dos seletores é possível atribuir ações JavaScript
+                        aos elementos e determinar o comportamento deles conforme
+                        as ações do mouse, e outros. 
+                        <ol>
+                          <li>Id - representação "#"</li>
+                          <li>class - representação - "."</li>
+                        </ol>                        
+                         <fieldset>                          
+                          <legend><b>Exemplo</b></legend>
+                          <fieldset style="padding: 10px;">
+                          <code>
+                            &lt;input class='customInput' id='nome'>
+                          </code>                       
+                          <br>   
+                          <label for='nome'>Nome</label>                          
+                          <input type="text" size=10 id='nome' ><br>
+                        </fieldset>
+                        <p>
+                        No código o seletor <b>id</b> recebe o valor "nome", e o seletor
+                          <b>class</b> recebe o valor "customInput".
+                          o JavaScript pode atribuir uma função específica a este input, 
+                          ou mesmo ler os valores nele contido através do seletor id. 
+                          O navegador lê o código HTML e o CSS, e se utiliza dos seletores <b>class</b> ou mesmo do <b>id</b>
+                          no momento de renderizar a página. 
+                          Caso haja alguma referência ao elemento HTML nó código CSS, desde que corretamente escrito, 
+                          o navegador processa e escreve respeitando as regras definidas, como regras de cor, fonte e outras mais.
+                          <br>
+                          <fieldset>
+                          <legend>Em código JavaScript</legend>
+                          <code>
+                            var x = document.getElementById('nome');
+                          </code>
+                          
+                          </fieldset>
+                          <p>
+                          O código acima atribui à variavel X o elemento
+                          input , cujo id é "nome". A partir disso é possível
+                          realizar operações diversas.                          
+                          </p>
+                        <fieldset>
+                          <legend>Em código Css</legend>                          
+                        <code>
+                          .customInput {color:blue;font-size:10px;}                                                 
+                        </code>
+                        <p>
+                          O código acima atribui à todo elemento que pertencer à "customInput" 
+                          as características escritas dentro das chaves, como color e font-size,
+                          que são atributos de css.
+                          </p>
+                      </fieldset>
+                      </p>
+                        </fieldset>
+                      </fieldset>
+                  </fieldset>
+                </p> 
+              </p>                                                        
+                <p>
+                 <fieldset style="padding: 10px;">
+                  <legend>Exemplo de Formulário</legend>
+                   <form method="get" action="">
+                    <label for="nome">Nome</label>
+                    <br><input id="nome" placeholder="Seu nome">                    
+                    <br><label for="idade">Idade</label>
+                    <br><input type="number" min="0" id="idade">                    
+                    <br><label for="atividades">Atividades</label>
+                    <br><textarea id="atividades" cols="20" rows="5">                       
+                    </textarea>
+                   </form>                  
+                   <input type="Submit" value="Enviar">
+                 </fieldset> 
+                  <br>
+                 <fieldset style="padding: 10px;">
+                  <legend><b>Código correspondente</b></legend>
+                   <code>
+                    <dl>&lt;form method="get" action="" id="form">                      
+                      <dd>&lt;label for="nome">Nome&lt;/label></dd>
+                      <dd>&lt;br>&lt;input placeholder="Seu nome"></dd>                        
+                      <dd>&lt;br>&lt;label for="nome">Nome&lt;/label></dd>
+                      <dd>&lt;br>&lt;input placeholder="Seu nome"></dd>                        
+                      <dd>&lt;br>&lt;label for="atividades">Nome&lt;/label></dd>
+                      <dd>&lt;br>&lt;textarea id="atividades" cols="20" rows="5"></dd>
+                      <dd>&lt;/textarea></dd></dd>
+                      <dd>&lt;input type="Submit" value="Enviar"></dd>
+                      &lt;/form></dd>                                  
+                    </dl>
+                   </code>
+                  <legend>
+                    Os atributos <b>Method</b> e <b>Action</b> são exclusivos do objeto <b>form</b>, cujas funções são
+                    enviar dados do formulário. O método deste envio pode ser <b>POST</b> ou <b>GET</b>, ou demais que 
+                    serão descritos no tópico <b>REST</b>.
+                    <br>
+                  </legend>
+                 </fieldset>                              
+                <p>
+            </li>                
+        </body>
+    </body>
+</html>
