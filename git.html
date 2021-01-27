@@ -37,20 +37,17 @@
         <li>Escolher uma pasta de projeto ou criar uma</li>
         </ol>
         
-        <h4 style="color:red">*Na pasta do projeto executar os comandos </h4>
-        
-        <ul>
-           <li>Git init - cria o git na pasta</li>           
-           <li>LS -a (enxerga diretorio)</li>        
-           <li>Mk Dir - cria diretório</li>
-           <li>CD - entra na pasta</li>
-        </ul>
-        
+               
         <fieldset>
             <legend>Operações com git</legend>
             <ol>
-             <li>git status - mostra status dos arquivos da contexto</li>
+             <li>git status - <i>mostra status dos arquivos da contexto</i></li>
+             <li>git branch - retorna bracnh atual</li>
+             <li>git branch nome- Cria uma branch com o nome</li>
+             <li>Deletar Branches<br>Local git branch --d<br>Remoto git branch -dr&lt;remote>/&lt;branch></li>
              <li>git update - atualiza</li>
+             <li>git remote -v - retorna repositório destino gravado</li>
+             <li>git confg --listv - retorna configurações do git</li>
              <li>git revert - reverte</li>
              <li>git add - adiciona arquivos ao git</li>
              <li>git add untracked -    </li>
@@ -59,6 +56,26 @@
              <li>git quit - sai do git</li>
              <li>git rm - remove arquivo da <b>lista</b> e da pasta do projeto</li>
              <li>git commit - grava alterações incluídas</li>
+            </ol>
+        </fieldset>
+
+        <fieldset>
+            <legend>Exercício</legend>
+            <h4 style="color:red">*Na pasta do projeto executar os comandos </h4>
+            <ol>
+             <li>botão direito do mouse-> menu de contexto/GitBash here</li>
+             <li>Configurar Git<br><i>$ git config <i>-global user.name "Bruno Daher" $ git config <i>-global user.email "brunus9@gmail.com"</i></li>
+             <li>Iniciar Git<br><i>git init</i></li>
+             <li>Conferir Git<br><i>git status</i></li>
+             <li>Conferir Branches<br><i>git branch</i></li>             
+             <li>Adicionar Destino (repositório)<br><i>git remote add nomeDoRepositorio  https://github.com/BrunoDaher/testetricks.github.io.git </i></li>
+             <li>Adicionar todos arquivos ao índice<br><i>git add *</i></li>
+             <li>Commit<br><i>git commit <i>m "nome do commit e infos add"</i></li>
+             <li>Enviar para destino<br><i>git push nomeRepositorio branchAtual</i></li>
+             <li>git diff <i> mostra diferenças entre versões de um mesmo arquivo</li>
+             <li>git quit <i> sai do git</li>
+             <li>git rm <i> remove arquivo da <b>lista</b> e da pasta do projeto</li>
+             <li>git commit <i> grava alterações incluídas</li>
             </ol>
         </fieldset>
     </fieldset>
