@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação</title>
+</head>
+<body>
+  <header>
+    <nav>
+    <ul>
+      <li><a href="index.html">INÍCIO</a></li>
+      <li><a href="git.html">GIT</a></li>
+      <li><a href="api.html">APIs Restfull</a></li>      
+      <li><a href="conceitos.html">CONCEITOS</a></li>
+      <li><a href="formularios.html">FORMULARIOS</a></li>
+      <li><a href="navegacao.html">NAVEGACAO</a></li>
+    </ul>
+  </nav>
+  </header> 
+    <fieldset>
+        <legend>Navegação</legend>
+        É possível navegar para fora da página, através dos hyperlinks, 
+        ou mesmo para dentro da página, usando os seletores "id".
+        Isso se faz através da tag &lt;a href>. 
+
+        Um bom exemplo disso é poder navagar, partindo de um dos itens de um
+        sumário para seu respectivo capítulo dentro da página.
+
+        <br> Algo como:
+        <br>
+        <code>
+            &lt;a href ='#capitulo2'> Capitulo 2 &lt;a>
+        </code>
+        <dl>
+          <dd>Navegação Intera <a href="#capitulo2">Capítulo 2</a></dd>
+          <dd>Navegação Externa <a href="conceitos.html" target="_self">Conceitos</a></dd>
+        </dl>
+    </fieldset>
+</body>
+
+</html>
