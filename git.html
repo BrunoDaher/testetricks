@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIT - windows</title>
-</head>
-<body>
-    <header>
-        <nav>
-        <ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GIT - windows</title>
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/tema.css">
+    </head>
+    <body class="temaBlack">
+      <header>
+        <menu class = 'card'>
           <li><a href="index.html">INÍCIO</a></li>
           <li><a href="git.html">GIT</a></li>
           <li><a href="api.html">APIs Restfull</a></li>
           <li><a href="conceitos.html">CONCEITOS</a></li>
           <li><a href="formularios.html">FORMULARIOS</a></li>
           <li><a href="navegacao.html">NAVEGACAO</a></li>
-        </ul>
-      </nav>
-      </header>  
+        </menu>               
+        <link rel="stylesheet" href="css/menu.css">
+      </header>    
     <H2>GIT WINDOWS</H2>
     <fieldset>
          <legend>Conceito</legend>
@@ -44,7 +45,7 @@
              <li>git status - <i>mostra status dos arquivos da contexto</i></li>
              <li>git branch - retorna bracnh atual</li>
              <li>git branch nome- Cria uma branch com o nome</li>
-             <li>Deletar Branches<br>Local git branch --d<br>Remoto git branch -dr&lt;remote>/&lt;branch></li>
+             <li>Deletar Branches<br>Local git branch --d nomedaBranch<br>Remoto git push origin --delete nomeDaBranch</li>
              <li>git update - atualiza</li>
              <li>git remote -v - retorna repositório destino gravado</li>
              <li>git confg --listv - retorna configurações do git</li>
@@ -54,8 +55,11 @@
              <li>git patch - atualiza arquivos</li>
              <li>git diff - mostra diferenças entre versões de um mesmo arquivo</li>
              <li>git quit - sai do git</li>
-             <li>git rm - remove arquivo da <b>lista</b> e da pasta do projeto</li>
-             <li>git commit - grava alterações incluídas</li>
+             <li>git rm - remove arquivo da <b>lista</b> e da pasta do projeto</li>             
+             <li>git checkout - muda de branch</li>
+             <li>git commit - grava alterações no index</li>
+             <li>git push nomedoRepositorio - envia para o servidor (definido no config)
+                 <br><h4 style="color:red">*procedimento vai pedir senha do Repositório <i>neste caso GitHub</i></h4></li>
             </ol>
         </fieldset>
 
@@ -64,21 +68,36 @@
             <h4 style="color:red">*Na pasta do projeto executar os comandos </h4>
             <ol>
              <li>botão direito do mouse-> menu de contexto/GitBash here</li>
-             <li>Configurar Git<br><i>$ git config <i>-global user.name "Bruno Daher" $ git config <i>-global user.email "brunus9@gmail.com"</i></li>
-             <li>Iniciar Git<br><i>git init</i></li>
-             <li>Conferir Git<br><i>git status</i></li>
-             <li>Conferir Branches<br><i>git branch</i></li>             
-             <li>Adicionar Destino (repositório)<br><i>git remote add nomeDoRepositorio  https://github.com/BrunoDaher/testetricks.github.io.git </i></li>
-             <li>Adicionar todos arquivos ao índice<br><i>git add *</i></li>
-             <li>Commit<br><i>git commit <i>m "nome do commit e infos add"</i></li>
-             <li>Enviar para destino<br><i>git push nomeRepositorio branchAtual</i></li>
-             <li>git diff <i> mostra diferenças entre versões de um mesmo arquivo</li>
-             <li>git quit <i> sai do git</li>
-             <li>git rm <i> remove arquivo da <b>lista</b> e da pasta do projeto</li>
-             <li>git commit <i> grava alterações incluídas</li>
+             <li>Configurar Git<br>
+                <code><i>$ git config <i>-global user.name "Bruno Daher" $ git config <i>-global user.email "brunus9@gmail.com"</i></li>
+               </code>
+             <li>Iniciar Git
+                 <code><br><i>git init</i></li>
+                </code>
+             <li>Conferir Git
+                <code><br><i>git status</i></li>
+                </code>
+             <li>Conferir Branches
+                 <code><br><i>git branch</i></li>
+                 </code>             
+             <li>Adicionar Destino (repositório)
+                <br> 
+                <code><i>git remote add gh-pagesBruno  https://github.com/BrunoDaher/testetricks.github.io.git </i></li>
+                </code>
+             <li>Adicionar todos arquivos ao índice
+                 <code><br><i>git add *</i></code>
+            </li>
+             <li>Commit
+                <code><br><i>git commit <i>m "nome do commit e infos add"</i></li>
+                </code>
+             <li>Enviar para destino
+                <code><br><i>git push nomeRepositorio branchAtual</i></li>
+                </code>
+             <li>Sair <br>
+                <code>git exit</code>
+            </li>             
             </ol>
         </fieldset>
-    </fieldset>
-    
-</body>
+    </fieldset>    
+    </body>
 </html>
