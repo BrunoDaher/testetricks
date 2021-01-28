@@ -1,0 +1,44 @@
+fieldset{
+    border-radius:4px;      
+}
+
+.temaBlack{
+    background-color: rgb(30, 30, 30);
+    color:white;
+}
+
+.temaWhite{
+    color: rgb(53, 46, 46);
+    background-color:white;
+}
+
+a:visited, a{
+    color:white;
+}
+
+a:hover, a:focus, legend{
+    color:rgb(53, 132, 206);    
+}
+
+menu li {            
+     list-style-type:disc;
+     position: relative;
+}
+
+code {
+    color:darkorange
+}
+
+legend{
+    text-transform: uppercase;
+    padding:3px;
+    margin:3px;
+
+}
+
+body{
+    margin: 10px;
+    padding: 10px;
+    }
+
+    
