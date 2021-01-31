@@ -1,7 +1,6 @@
 menu li{
-    padding: 2px 10px;
+    padding: 2px 10px;    
     display: inline-block;
-
     /* visual do link */
     background-color:#f3f2f2ce;
     color: rgb(17, 4, 4);
@@ -13,11 +12,30 @@ menu li{
   menu{
     text-align: center;
     padding: 10px;
-    margin:10px
+    margin:10px;    
+    text-transform: uppercase;
   }
  
+menu a:hover, a:focus, legend, a:visited, a:focus{
+    color:rgb(53, 132, 206);
+    text-decoration: none;
+    cursor: pointer;
+    }
 
     menu a:hover, a:focus, legend, a:visited, a{
-        color:rgb(53, 132, 206);
-        text-decoration: none;
+      color:rgb(53, 132, 206);
+      text-decoration: none;
+      cursor: pointer;
+      }
+  
+    
+  /*responsividade mobile*/
+  @media (max-width: 375px) {
+      menu li{
+        display: grid;
+        font-size: 1em;
+        letter-spacing: 3px;
+        line-height: 1em;
+      }
+
     }
