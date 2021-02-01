@@ -1,0 +1,52 @@
+.grid{        
+    background-color:rgb(27, 27, 31);
+    height: 90vh;
+    width: 80vw;
+
+    display: grid;
+    /*3 colunas*/
+    grid-template-columns: 1fr 1fr 1fr;
+    /*3 linhas*/
+    grid-template-rows: 1fr 1fr 1fr;
+    /*Margem externa*/
+    grid-gap: 5px;
+  }
+
+  .grid > div:hover, .grid > div:focus{  
+    color:white;
+    text-decoration: none;
+    cursor: pointer;       
+    background:#53a7ea;    
+    animation: activeGridItem 2.5s;
+  }
+ 
+  @keyframes activeGridItem {
+    from {font-size: 100%;
+    }
+    to {font-size: 200%;}
+  }
+
+  .centroFull, .grid > div{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .grid > div, menu > div{            
+    background-color:rgb(25, 25, 25);        
+    height: 100%;    
+    cursor: pointer;
+  }
+
+ 
+  .radius , .grid > div, .grid{
+    border-style:inset;
+    border-width:1px;
+    border-color:rgb(50, 50, 56);
+    border-radius:4px;
+  }
+
+  .rad3{
+    border-radius:10em !important;    
+  }
+  

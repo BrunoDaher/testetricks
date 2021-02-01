@@ -1,12 +1,12 @@
 
-const menu = document.querySelectorAll('.headMenu');
+
 
 function menuInit(){
     let menu = document.querySelectorAll('.headMenu');
-    menu.forEach(item => handl(item));
+    menu.forEach(item => addAction(item));   
 }
 
-function handl(item){
+function addAction(item){        
     item.addEventListener('click', event => {        
         release();
         item.parentNode.classList.add('active');        
@@ -15,15 +15,20 @@ function handl(item){
       })
 }
 
-let sheet = document.styleSheets[0];
-    let rules = sheet.cssRules || sheet.rules;
+function remAction(item){
+    //item.removeEventListener('click');
     
-    console.log(rules);
-    
+}
+
 
 function release(){
-    
-
     let menu = document.querySelectorAll('.headMenu');
         menu.forEach(item => item.parentNode.classList.remove('active'));
+}
+
+function attListener(msg){
+    let menu = document.querySelectorAll('.headMenu');
+    console.log(msg);
+    menu.forEach(item => remAction(item.parentNode));        
+    //menuInit();
 }

@@ -30,7 +30,7 @@ menu li , legend{
     text-transform: uppercase;    
   }
  
-menu .active, menu li:hover, menu li:focus{
+menu .active, menu li:hover, menu li:focus {
     color:white;
     text-decoration: none;
     cursor: pointer;       
@@ -39,7 +39,7 @@ menu .active, menu li:hover, menu li:focus{
   }
     
   /*responsividade mobile*/
-  @media (max-width: 375px) {
+  @media (max-width: 600px) {
       menu li{
         display: grid;
         font-size: 1em;
