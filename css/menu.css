@@ -4,24 +4,21 @@ menu li , legend{
     /* visual do link */
     border-style: inset;
     border-width: 1px;
-    border-color: #53a7ea;    
-    text-decoration: none;        
+    border-color: #53a7ea;        
     font-size: 2rem;        
-    border-radius:
-    7px;    
+    border-radius:7px;    
   }
 
   @keyframes active {
     from {
       background-color: rgb(0, 0, 0);
-      color:white;
+      color:247, 245, 245;
     }
     to {
       background-color: #53a7ea;
-      color:white;
+      color:rgb(247, 245, 245);
     }
   }
-
 
   menu{
     text-align: center;
@@ -31,11 +28,11 @@ menu li , legend{
   }
  
 menu .active, menu li:hover, menu li:focus {
-    color:white;
+    color:247, 245, 245;
     text-decoration: none;
     cursor: pointer;       
     background:#53a7ea;    
-    animation: active 0.5s;
+    animation: active 0.2s;
   }
     
   /*responsividade mobile*/

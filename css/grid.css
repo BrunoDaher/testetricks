@@ -1,6 +1,6 @@
 .grid{        
     background-color:rgb(27, 27, 31);
-    height: 90vh;
+    height: 80vh;
     width: 80vw;
 
     display: grid;
@@ -12,18 +12,32 @@
     grid-gap: 5px;
   }
 
+  .gridSmall{    
+    display: grid;                
+  }
+
+  .gridSmall > div{
+    text-align: center;    
+    word-break: none;    
+  }
+
+
   .grid > div:hover, .grid > div:focus{  
-    color:white;
+    color:rgb(228, 228, 228);
     text-decoration: none;
     cursor: pointer;       
     background:#53a7ea;    
-    animation: activeGridItem 2.5s;
+    animation: activeGridItem 2s;
   }
  
   @keyframes activeGridItem {
-    from {font-size: 100%;
+    from {
+      font-size: 100%;
     }
-    to {font-size: 200%;}
+    to {
+      font-size: 120%;
+      background:#fffc45 !important;    
+    }
   }
 
   .centroFull, .grid > div{
@@ -32,7 +46,7 @@
     justify-content: center;
   }
 
-  .grid > div, menu > div{            
+  .grid > div{            
     background-color:rgb(25, 25, 25);        
     height: 100%;    
     cursor: pointer;
@@ -49,4 +63,34 @@
   .rad3{
     border-radius:10em !important;    
   }
+  
+ 
+  a{
+    text-decoration: none;
+    cursor:pointer;
+  }
+
+  .floatMenu{
+    display: none;
+    row-gap: 4px;
+    position: fixed;    
+    padding: 1em;        
+    cursor:pointer;
+    right: 1em;
+  }
+
+  .floatMenu .head{
+    text-align: center;
+    font-size: 20px;
+    background-color: #53a7ea;
+  }
+
+  .softbox , .floatMenu{    
+      border-style: inset;
+      border-width: 1px;
+     border-radius: 7px;
+     border-color:black;
+     background-color:#1f1f1f
+  }
+
   

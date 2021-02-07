@@ -4,16 +4,16 @@ fieldset{
 
 .temaBlack{
     background-color: rgb(30, 30, 30);
-    color:white;
+    color:rgb(228, 228, 228);
 }
 
 .temaWhite{
     color: rgb(53, 46, 46);
-    background-color:white;
+    background-color:rgb(228, 228, 228);
 }
 
 a:visited, a{
-    color:white;
+    color:rgb(228, 228, 228);
 }
 
 main a:hover, a:focus{
@@ -25,8 +25,12 @@ menu li {
      position: relative;
 }
 
-code {
-    color:darkorange
+fieldset > form {
+    display: grid !important;
+    padding: 17px;
+    line-height: 36px;
+    margin-bottom: 1em;
+    width: 50%;
 }
 
 legend{
@@ -42,4 +46,8 @@ body{
     padding: 10px;
     }
 
-    
+code{ color:darkorange;}
+
+    input{
+        background-color:rgb(235, 235, 235)
+    }
