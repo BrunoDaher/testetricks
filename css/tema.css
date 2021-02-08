@@ -16,6 +16,11 @@ a:visited, a{
     color:rgb(228, 228, 228);
 }
 
+p{
+    word-break: break-word;
+}
+
+
 main a:hover, a:focus{
     color:rgb(53, 132, 206);    
 }

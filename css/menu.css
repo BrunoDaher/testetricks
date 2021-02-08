@@ -37,11 +37,17 @@ menu .active, menu li:hover, menu li:focus {
     
   /*responsividade mobile*/
   @media (max-width: 600px) {
+    
+    
       menu li{
         display: grid;
-        font-size: 1em;
+        font-size: 2em;
         letter-spacing: 3px;
         line-height: 1em;
       }
+
+      fieldset{
+          /*display:inline-flex;*/
+        }
 
     }
