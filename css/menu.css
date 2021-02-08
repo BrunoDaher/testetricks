@@ -44,6 +44,10 @@ menu li , legend{
     right: 1em;
   }
 
+  .floatMenu:focus{
+    background-color:black;
+  }
+
   .floatMenu .head{
     text-align: center;
     font-size: 20px;

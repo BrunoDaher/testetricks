@@ -25,7 +25,7 @@
     color:rgb(228, 228, 228);
     text-decoration: none;
     cursor: pointer;       
-    background:#53a7ea;    
+    background:#c44614;    
     animation: activeGridItem 2s;
   }
  
@@ -67,33 +67,6 @@
   a{
     text-decoration: none;
     cursor:pointer;
-  }
-
-  a:focus{
-    color:red;
-  }
-
-  .floatMenu{
-    display: none;
-    row-gap: 4px;
-    position: fixed;    
-    padding: 1em;        
-    cursor:pointer;
-    right: 1em;
-  }
-
-  .floatMenu .head{
-    text-align: center;
-    font-size: 20px;
-    background-color: #53a7ea;
-  }
-
-  .softbox , .floatMenu{    
-      border-style: inset;
-      border-width: 1px;
-     border-radius: 7px;
-     border-color:black;
-     background-color:#1f1f1f
   }
 
   

@@ -33,7 +33,6 @@ return translateX; // get translateX value
 
 }
 
-let dragIsOn = false;
 
 
 function update() {
@@ -45,3 +44,33 @@ function menuDragInit(){
   let tgButton = document.querySelector('.head');
   tgButton.addEventListener('click', ()=> toggleEvent(tgButton));
 }
+
+
+
+let dragIsOn = false;
+
+function toggleEvent(tgButton){
+    let main = document.querySelector('main');
+    
+    dragIsOn = !dragIsOn;
+
+    if(dragIsOn){
+        main.addEventListener('mouseover', togglesub);
+    }
+    else{
+        main.addEventListener('click', myRemoveFunct());
+    }
+}
+
+function togglesub(){
+    var e = window.event;    
+    let floatMenu = document.querySelector('#submenu');    
+    floatMenu.style.opacity = 0.2;
+    floatMenu.style.left = (e.clientX + 10)  + 'px';
+    floatMenu.style.top = (e.clientY + 10) + 'px';
+}
+
+function myRemoveFunct() {  
+    let main = document.querySelector('main');
+    main.removeEventListener('mouseover', togglesub);
+  }
