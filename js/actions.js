@@ -23,12 +23,6 @@ function attListener(msg){
     menu.forEach(item => remAction(item));            
 }
 
-let dragIsOn = false;
-
-function menuDragInit(){        
-    let tgButton = document.querySelector('.head');
-    tgButton.addEventListener('click', ()=> toggleEvent(tgButton));
-}
 
 function toggleEvent(tgButton){
     let main = document.querySelector('main');

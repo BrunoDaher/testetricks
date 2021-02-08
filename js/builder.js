@@ -5,10 +5,7 @@ function inicio(){
     getFrag('menu', 'header');
     //despacha evento
     window.removeEventListener("load", inicio);
-
-    
 }
-
 
 function getFrag(url,divName){
     let path = url != "index"? "frags/":"";
@@ -38,8 +35,7 @@ function getFrag(url,divName){
 function syncMenuInit(url){
     //console.log('atualizando menus -> ' + url );
     let link = document.querySelectorAll('.link');         
-    link ? link.forEach(item => addAction(item)):false;  
-    
+    link ? link.forEach(item => addAction(item)):false;      
 }
 ///attListener();
 

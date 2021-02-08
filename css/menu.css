@@ -27,13 +27,37 @@ menu li , legend{
     text-transform: uppercase;    
   }
  
-menu .active, menu li:hover, menu li:focus {
+   menu li:hover, menu li:focus {
     color:247, 245, 245;
     text-decoration: none;
     cursor: pointer;       
     background:#53a7ea;    
     animation: active 0.2s;
   }
+
+  .floatMenu{
+    display: none;
+    row-gap: 4px;
+    position: fixed;    
+    padding: 1em;        
+    cursor:pointer;
+    right: 1em;
+  }
+
+  .floatMenu .head{
+    text-align: center;
+    font-size: 20px;
+    background-color: #53a7ea;
+  }
+
+  .softbox , .floatMenu{    
+      border-style: inset;
+      border-width: 1px;
+     border-radius: 7px;
+     border-color:black;
+     background-color:#1f1f1f
+  }
+
     
   /*responsividade mobile*/
   @media (max-width: 600px) {
@@ -48,6 +72,7 @@ menu .active, menu li:hover, menu li:focus {
 
       fieldset{
           /*display:inline-flex;*/
+          word-break: break-word;
         }
 
     }

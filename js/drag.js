@@ -33,8 +33,15 @@ return translateX; // get translateX value
 
 }
 
+let dragIsOn = false;
+
+
 function update() {
     needForRAF = true; // rAF consumes the movement instruction a new one can come
     el.style.transform = "translateX(" + distancePosition + "px)";// move it!
 }
     
+function menuDragInit(){        
+  let tgButton = document.querySelector('.head');
+  tgButton.addEventListener('click', ()=> toggleEvent(tgButton));
+}

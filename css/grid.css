@@ -21,7 +21,6 @@
     word-break: none;    
   }
 
-
   .grid > div:hover, .grid > div:focus{  
     color:rgb(228, 228, 228);
     text-decoration: none;
@@ -36,7 +35,7 @@
     }
     to {
       font-size: 120%;
-      background:#fffc45 !important;    
+      background:#53a7ea  !important;    
     }
   }
 
@@ -68,6 +67,10 @@
   a{
     text-decoration: none;
     cursor:pointer;
+  }
+
+  a:focus{
+    color:red;
   }
 
   .floatMenu{
