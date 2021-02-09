@@ -39,13 +39,8 @@ menu li , legend{
     display: none;
     row-gap: 4px;
     position: fixed;    
-    padding: 1em;        
-    cursor:pointer;
+    padding: 1em;            
     right: 1em;
-  }
-
-  .floatMenu:focus{
-    background-color:black;
   }
 
   .floatMenu .head{
@@ -66,12 +61,26 @@ menu li , legend{
   /*responsividade mobile*/
   @media (max-width: 600px) {
     
-    
       menu li{
         display: grid;
         font-size: 2em;
         letter-spacing: 3px;
         line-height: 1em;
+      }
+
+      @keyframes inactive {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      menu{
+           top: 0;
+          left: 0;
+        margin: 5px;
       }
 
       fieldset{

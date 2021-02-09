@@ -1,4 +1,5 @@
-window.addEventListener("load", inicio);
+//abertura do site
+inicio();
 
 function inicio(){
     

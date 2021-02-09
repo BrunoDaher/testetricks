@@ -1,3 +1,11 @@
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;    
+}
+
 fieldset{
     border-radius:4px;      
 }
@@ -20,6 +28,9 @@ p{
     word-break: break-word;
 }
 
+main{
+    padding-top:10vh;
+}
 
 main a:hover, a:focus{
     color:rgb(53, 132, 206);    
@@ -55,4 +66,11 @@ code{ color:darkorange;}
 
     input{
         background-color:rgb(235, 235, 235)
+    }
+
+
+    @media (max-width: 600px) {
+        main{
+            padding-top:42vh;
+        }
     }
