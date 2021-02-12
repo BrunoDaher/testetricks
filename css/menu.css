@@ -9,6 +9,23 @@ menu li , legend{
     border-radius:7px;    
   }
 
+ 
+
+  menu{
+    text-align: center;
+    padding: 10px;
+    margin:10px;    
+    text-transform: uppercase;    
+  }
+ 
+   menu li:hover, menu li:focus , .headMenu.active{
+    color:247, 245, 245;
+    text-decoration: none;
+    cursor: pointer;       
+    background:#53a7ea;    
+    animation: active 0.2s;
+  }
+
   @keyframes active {
     from {
       background-color: rgb(0, 0, 0);
@@ -20,33 +37,23 @@ menu li , legend{
     }
   }
 
-  menu{
-    text-align: center;
-    padding: 10px;
-    margin:10px;    
-    text-transform: uppercase;    
-  }
- 
-   menu li:hover, menu li:focus {
-    color:247, 245, 245;
-    text-decoration: none;
-    cursor: pointer;       
-    background:#53a7ea;    
-    animation: active 0.2s;
-  }
-
   .floatMenu{
     display: none;
     row-gap: 4px;
     position: fixed;    
     padding: 1em;            
     right: 1em;
+    z-index: 2;
   }
 
   .floatMenu .head{
     text-align: center;
     font-size: 20px;
     background-color: #53a7ea;
+  }
+
+  .colapse {
+      display: none;
   }
 
   .softbox , .floatMenu{    
@@ -61,26 +68,48 @@ menu li , legend{
   /*responsividade mobile*/
   @media (max-width: 600px) {
     
-      menu li{
+  
+    .colapse{
+      display:flex;
+      justify-content: space-between;
+    }
+    
+    .colapse div{
+      font-size:35px;
+      color:green;
+      width:1em;
+      padding:2px auto;
+    }
+
+      menu li {
         display: grid;
         font-size: 2em;
         letter-spacing: 3px;
         line-height: 1em;
       }
 
-      @keyframes inactive {
-        from {
-          opacity: 1;
-        }
-        to {
-          opacity: 0;
-        }
+      @keyframes visible {
+        from {right:100vw;}
+        to {right:0;}
+      }
+
+      .menuInner{        
+        position: relative;        
+        right:100vw;
+        display: none;
+        margin-top: 10px;
+      }
+
+      .menuInner.active{
+        animation: visible 0.6s;                  
+        right:0;
+        display: block;
       }
 
       menu{
            top: 0;
           left: 0;
-        margin: 5px;
+        margin: 0px;
       }
 
       fieldset{

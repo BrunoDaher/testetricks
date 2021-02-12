@@ -4,6 +4,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;    
+    z-index: 1;
 }
 
 fieldset{
@@ -71,6 +72,7 @@ code{ color:darkorange;}
 
     @media (max-width: 600px) {
         main{
-            padding-top:42vh;
+            position: relative;
+            padding-top:7vh;
         }
     }

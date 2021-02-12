@@ -1,16 +1,32 @@
-function cria(tipo){
-    let obj = document.createElement(tipo);
-    return obj;
+function menuClear(){
+    let menu = document.querySelectorAll('.headMenu');
+        menu.forEach(item => item.classList.remove('active'));
 }
 
-function criaComp(tipo,nomeClasse,id){
-    let obj = cria(tipo);
-    id ? obj.id = id:"";
-    obj.className = nomeClasse;
-    return obj;
+function menuInit(){    
+    //monta um array com o seletor .headMenu    
+    let isHeadMenu = document.querySelectorAll('.headMenu');       
+    if(isHeadMenu){
+        let menu = document.querySelectorAll('.headMenu');
+        //itera o array e add uma action pra cada elemento
+        menu.forEach(item => addAction(item));   
+    }
 }
 
-function headFootBox(str){
+function toggle(div){
+    document.querySelector('.' + div).classList.toggle('active');
+}
+
+function addAction(item){                
+    item.addEventListener('click', event => {                        
+        menuClear();
+        item.classList.add('active');        
+        document.title = item.innerText;                
+        loadFrag(item.getAttribute('_target'),'main');
+      })
+}
+
+function subMenuBox(str){
     let obj =  criaComp('div','head ',false);
     let a = cria('a');
     a.append(str);    
@@ -19,16 +35,15 @@ function headFootBox(str){
     return obj;
 }
 
-function subMenu(){
+function sumario(){
     //cria o menu
     let submenu = criaComp('div','floatMenu','submenu');    
-    submenu.append(headFootBox('Sumário'));
-    
+    submenu.append(subMenuBox('Sumário'));    
     document.querySelector('main').prepend(submenu);
 
     let menu = document.querySelectorAll('legend');        
         menu.forEach(item => subMenuBuild(item, submenu));            
-    submenu.append(headFootBox('Fechar'));    
+    submenu.append(subMenuBox('Fechar'));    
     //actions
     document.querySelector('.btnSumario').addEventListener('click', toggleMenu);
 }

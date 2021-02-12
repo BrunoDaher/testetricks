@@ -1,18 +1,14 @@
-//abertura do site
+//abertura da pagina
 inicio();
 
 function inicio(){
-    
-    getFrag('menu', 'header');
-    //despacha evento
-    window.removeEventListener("load", inicio);
+    loadFrag('menu', 'header');    
 }
 
-function getFrag(url,divName){
+function loadFrag(url,divName){
     let path = url != "index"? "frags/":"";
 
     //console.log(path + url + ".html");
-
     fetch(path + url + ".html").
         then( response =>   {
         // The API call was successful!                
@@ -20,19 +16,26 @@ function getFrag(url,divName){
             })
             .then( html =>  
             {
-                let _divTarget = document.querySelector(divName);                                
-                _divTarget.innerHTML = html; 
-                url=='menu' ? menuInit():"";                 
-                url=='menu' || url=='inicio'? "":subMenu();     
+                loadHtml(html, divName, url);
+                // ^nesse momento o conteúdo já foi carregado                
+                url=='menu' || url=='inicio'? "":sumario();    
             })
-            .catch(function () {        
-                console.log('Something went wrong.');
+            .catch(function (e) {        
+                console.log('Something went wrong. Descrição');
+                console.log(e);
             });
 
     setTimeout( ()=> { syncMenuInit(url)} , 10);       
 }
 
-//getFrag('inicio.html', 'main');
+
+function loadHtml(html,divName,url){
+    let _divTarget = document.querySelector(divName);                                
+        _divTarget.innerHTML = html;         
+        url=='menu' ? menuInit():"";                 
+}
+
+//loadFrag('inicio.html', 'main');
 function syncMenuInit(url){
     //console.log('atualizando menus -> ' + url );
     let link = document.querySelectorAll('.link');         
@@ -40,5 +43,14 @@ function syncMenuInit(url){
 }
 ///attListener();
 
+function cria(tipo){
+    let obj = document.createElement(tipo);
+    return obj;
+}
 
-
+function criaComp(tipo,nomeClasse,id){
+    let obj = cria(tipo);
+    id ? obj.id = id:"";
+    obj.className = nomeClasse;
+    return obj;
+}
