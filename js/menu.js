@@ -17,11 +17,12 @@ function toggle(div){
     document.querySelector('.' + div).classList.toggle('active');
 }
 
-function addAction(item){                
-    item.addEventListener('click', event => {                        
+function addAction(item){
+    item.addEventListener('click', event => {
         menuClear();
-        item.classList.add('active');        
-        document.title = item.innerText;                
+        item.classList.add('active');
+        document.title = item.innerText;
+        document.querySelector('#currentItem').innerText = item.innerText;
         loadFrag(item.getAttribute('_target'),'main');
       })
 }
