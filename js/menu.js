@@ -6,10 +6,12 @@ function menuClear(){
 function menuInit(){    
     //monta um array com o seletor .headMenu    
     let isHeadMenu = document.querySelectorAll('.headMenu');       
+
+       
     if(isHeadMenu){
-        let menu = document.querySelectorAll('.headMenu');
+        //let menu = document.querySelectorAll('.headMenu');
         //itera o array e add uma action pra cada elemento
-        menu.forEach(item => addAction(item));   
+        isHeadMenu.forEach(item => addAction(item));   
     }
 }
 

@@ -29,16 +29,7 @@
     animation: activeGridItem 2s;
   }
  
-  @keyframes activeGridItem {
-    from {
-      font-size: 100%;
-    }
-    to {
-      font-size: 120%;
-      background:#53a7ea  !important;    
-    }
-  }
-
+ 
   .centroFull, .grid > div{
     display: grid;
     align-content: center;

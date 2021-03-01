@@ -1,3 +1,5 @@
+@import url("transicoes.css");
+
 menu li , legend{
     padding: 2px 10px;    
     display: inline-block;
@@ -8,8 +10,6 @@ menu li , legend{
     font-size: 2rem;        
     border-radius:7px;    
   }
-
- 
 
   menu{
     text-align: center;
@@ -26,16 +26,6 @@ menu li , legend{
     animation: active 0.2s;
   }
 
-  @keyframes active {
-    from {
-      background-color: rgb(0, 0, 0);
-      color:247, 245, 245;
-    }
-    to {
-      background-color: #53a7ea;
-      color:rgb(247, 245, 245);
-    }
-  }
 
   .floatMenu{
     display: none;
@@ -44,6 +34,7 @@ menu li , legend{
     padding: 1em;            
     right: 1em;
     z-index: 2;
+    animation: rightToLeft 0.2s;
   }
 
   .floatMenu .head{
@@ -63,12 +54,10 @@ menu li , legend{
      border-color:black;
      background-color:#1f1f1f
   }
-
     
   /*responsividade mobile*/
   @media (max-width: 600px) {
-    
-  
+
     .colapse{
       display:flex;
       justify-content: space-between;
@@ -87,11 +76,6 @@ menu li , legend{
         line-height: 1em;
       }
 
-      @keyframes visible {
-        from {right:100vw;}
-        to {right:0;}
-      }
-
       .menuInner{        
         position: relative;        
         right:100vw;
@@ -100,7 +84,7 @@ menu li , legend{
       }
 
       .menuInner.active{
-        animation: visible 0.6s;                  
+        animation: leftToRight 0.6s;                  
         right:0;
         display: block;
       }

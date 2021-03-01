@@ -14,9 +14,9 @@ function loadFrag(url,divName){
         // The API call was successful!                
             return response.ok ? response.text():false;            
             })
-            .then( html =>  
+            .then( responseHtml =>  
             {
-                loadHtml(html, divName, url);
+                loadHtml(responseHtml, divName, url);
                 // ^nesse momento o conteúdo já foi carregado                
                 url=='menu' || url=='inicio'? "":sumario();    
             })

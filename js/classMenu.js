@@ -1,13 +1,15 @@
 export class Menu {
 
+    menu = document.querySelectorAll('.headMenu');
+
      menuClear() {
          console.log('menuClear')
-        let menu = document.querySelectorAll('.headMenu');
+        //let menu = document.querySelectorAll('.headMenu');
             menu.forEach(item => item.classList.remove('active'));
      }
   
      menuInit(){
-        let menu = document.querySelectorAll('.headMenu');
+        //let menu = document.querySelectorAll('.headMenu');
         menu.forEach(item => addAction(item));   
      }
 
@@ -28,8 +30,8 @@ export class Menu {
         
         document.querySelector('main').prepend(submenu);
 
-        let menu = document.querySelectorAll('legend');        
-            menu.forEach(item => subMenuBuild(item, submenu));            
+        let legend = document.querySelectorAll('legend');        
+            legend.forEach(item => subMenuBuild(item, submenu));            
         submenu.append(subMenuBox('Fechar'));    
         //actions
         document.querySelector('.btnSumario').addEventListener('click', toggleMenu);
