@@ -1,4 +1,28 @@
 
+@import url("io.css");
+@import url("menu.css");
+@import url("grid.css");
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222121; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:  #53a7ea;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 header{
     position: fixed;
     top: 0;
@@ -30,7 +54,8 @@ p{
 }
 
 main{
-    padding-top:10vh;
+    top: 10vh;
+    position: absolute;            
 }
 
 main a:hover, a:focus{
@@ -63,6 +88,17 @@ body{
     padding: 10px;
     }
 
+footer {    
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    margin: 0;
+    left: 0;    
+    width: 100%;    
+    padding: 1em;
+    text-align: center;
+}
+
 code{ color:darkorange;}
 
     input{
@@ -73,6 +109,8 @@ code{ color:darkorange;}
     @media (max-width: 600px) {
         main{
             position: relative;
-            padding-top:7vh;
+            top: 3em;
+            max-height: 82vh;            
+            overflow-y: scroll;
         }
     }

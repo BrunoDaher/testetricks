@@ -18,21 +18,29 @@ function loadFrag(url,divName){
             {
                 loadHtml(responseHtml, divName, url);
                 // ^nesse momento o conteúdo já foi carregado                
-                url=='menu' || url=='inicio'? "":sumario();    
+                if(url=='menu' || url=='inicio'){
+
+                }
+                else{
+                    sumario();
+                } 
             })
             .catch(function (e) {        
                 console.log('Something went wrong. Descrição');
                 console.log(e);
             });
 
-    setTimeout( ()=> { syncMenuInit(url)} , 10);       
+    setTimeout( ()=> { syncMenuInit(url)} , 100);       
 }
 
 
 function loadHtml(html,divName,url){
+    //document.querySelector('')
+
     let _divTarget = document.querySelector(divName);                                
         _divTarget.innerHTML = html;         
-        url=='menu' ? menuInit():"";                 
+        url=='menu' ? menuInit(): ""  ;    
+               
 }
 
 //loadFrag('inicio.html', 'main');

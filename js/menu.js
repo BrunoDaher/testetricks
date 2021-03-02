@@ -16,11 +16,16 @@ function menuInit(){
 }
 
 function toggle(div){
+    document.querySelector('.bar').classList.toggle('active');
     document.querySelector('.' + div).classList.toggle('active');
 }
 
 function addAction(item){
+    //toggle('menuInner') ;
+ 
     item.addEventListener('click', event => {
+        let t = event.target.className;
+        t == 'headMenu' ?toggle('menuInner'):"" ;
         menuClear();
         item.classList.add('active');
         document.title = item.innerText;
