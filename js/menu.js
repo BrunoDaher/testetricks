@@ -2,6 +2,8 @@ function menuClear(){
     let menu = document.querySelectorAll('.headMenu');
         menu.forEach(item => item.classList.remove('active'));
 }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+
 
 function menuInit(){    
     //monta um array com o seletor .headMenu    

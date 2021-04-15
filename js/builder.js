@@ -1,7 +1,9 @@
 //abertura da pagina
 inicio();
 
+
 function inicio(){
+    var y = 'teste'
     loadFrag('menu', 'header');    
 }
 

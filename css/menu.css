@@ -6,7 +6,7 @@ menu li , legend{
     /* visual do link */
     border-style: inset;
     border-width: 1px;
-    border-color: #53a7ea;        
+    border-color: #53a6ea4b;        
     font-size: 2rem;        
     border-radius:7px;    
   }
@@ -81,15 +81,17 @@ menu li , legend{
 
       .menuInner{        
         position: relative;   
-        margin-top: -15em;
+        margin-top: -50vh;
         z-index: -100;
-        transition:all 0.3s;
+        opacity:0;
+        transition:all 0.7s;
       }
 
       .menuInner.active{
         z-index: 1;                  
-        margin-top: 10px;          
-        transition:all 0.3s;
+        margin-top: 3vh;       
+        opacity: 1;   
+        transition:opacity 0.4s;
       }
 
       menu{
