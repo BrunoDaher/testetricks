@@ -97,7 +97,13 @@ footer {
     left: 0;    
     width: 100%;    
     padding: 1em;
-    text-align: center;
+   
+}
+
+footer > div{
+    color:#53a7ea;
+    text-align: left;
+   
 }
 
 code{ color:darkorange;}
