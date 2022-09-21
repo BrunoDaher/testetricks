@@ -17,18 +17,22 @@ Descrição do código
     <br>Se o x do exemplo acima fosse uma <i>const</i>
    
     <fieldset>
-        <legend>DOM (Document Object Model)</legend>
-        O DOM é a interface que permite leitura e alteração de documentos HTML, SVG e XML, linguagens de estrutura e anotação
-        por nós ou aninhamento. 
-        Entre outras linguagens, o JavaScript lê esta estrutura aninhada e através do DOM (uso de api) pode controlar o comportamento
-        dos elementos da página, configurações CSS, bem como gerenciais configurações do navegador para a página em questão, como 
-        memória de sessão e memória local.
-        Com controle de eventos e gerencia de animações é possível até mesmo fazer jogos em JS, ainda que pequenos. Mas já seguem em testes
-        jogos FPS, através de uso de APIs mais apropriadas pra renderização 3D.        
+        <legend>Instalação</legend>
+    É necessário fazer a instalação do Node.js para poder instalar as ferramentas do firebase no console.   
+    <p>Na sequencia instalar NVM (gerenciador do Node), e em seguida o Firebase. 
+   <br> Passo a passo retirado de <i><a href="https://firebase.google.com/docs/cli" target="_blank"><i>https://firebase.google.com/docs/cli</i> <p></a> 
+    Após a instalação do node (apenas next...next...next no instalador), se tudo tiver devidamente instalado, basta digitar no terminal
+    o seguinte comando:
+  
+    <code>  <br>
+        npm install --save firebase<p></p>
+        npm install --save firebase-tools
+    </code>   
+</p>
     </fieldset>
 
     <fieldset>
-        <legend>Seletores</legend>   
+        <legend>Base de Dados</legend>   
         Através dos seletores o JS pode alterar ou atribuir eventos aos elementos da página, tais como:
         <ul>
             <li>name</li>
@@ -39,24 +43,10 @@ Descrição do código
         Os seletores podem ser atributos ou mesmo a própria tag em que estao encapsulados os elementos, ou mesmo, aninhados.
         <p>
         <fieldset>
-            <legend>Exemplo de leitura JS</legend>
-            <code>
-                &ltinput id='cpf'>
-            </code>
+            <legend>Autenticação de usuários</legend>
             
-            Lendo elemento com js<br>
             <code>
-                <pre>//faz a leitura do elemento
-let input = document.getelementById('cpf');
-//adiciona ao input um evento (quando alterada a palavra)
-input.addEventListener('change',leitura);
-//funcao que realiza a leitura
-function leitura(){
-    return input.value;
-}
-
-//exibe uma janela com o resultado
-alert(leitura())</pre>
+                <pre>Alguma coisa</pre>
             </code>
             </p>
         </fieldset>
